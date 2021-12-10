@@ -10,9 +10,8 @@ const Dashboard = () => {
   const [ devs, setDevs ] = useState([]);
   const [ allRes ] = useState({});
 
-  const getHonorByEnabler = (arr) => {
-    return arr.reduce((acc, ele) => acc + ele.honor, 0)
-  }
+  const getHonorByEnabler = (arr) => arr.reduce((acc, ele) => acc + ele.honor, 0);
+  
 
   const sortArrayByHonor = (arr) => {
     const again = (newArr) => {
@@ -40,11 +39,15 @@ const Dashboard = () => {
     let count = 0;
 
     if (name === 'Facilitadores') {
-      enabler.listEnablers.forEach(x => {
+      enabler.listEnablers.forEach(element => {
         arrView.push({
-          "name": x,
-          "id_user": enabler[x].id_user
+          "name": element,
+          "id_user": enabler[element].id_user
         })
+      })
+    } else if (name === 'Todos DEVs') {
+      enabler.listEnablers.forEach(element => {
+        arrView.push(...enabler[element].devs)
       })
     } else {
       arrView = enabler[name].devs;
@@ -76,12 +79,11 @@ const Dashboard = () => {
 
   }, [name]);
 
-
   return (
     <MainStyle>
-      <h2>Total de honor por turma: {getHonorByEnabler(devs)}</h2>
-      {devs.map((x, index) => 
-        index < 10 && <DevCard key={x.username} dev={x} position={index + 1}/>  
+      <h2>Total de honor {getHonorByEnabler(devs)}</h2>
+      {devs.map((currentDev, index) => 
+        index < 10 && <DevCard key={currentDev.username} dev={currentDev} position={index + 1}/>  
       )}
     </MainStyle>
   )

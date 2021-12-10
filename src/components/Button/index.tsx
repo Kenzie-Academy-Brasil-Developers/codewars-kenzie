@@ -1,15 +1,21 @@
-import { ButtonStyle } from './style';
 import { NameEnablerInfo } from './../../providers/NameEnabler'
+import { ButtonStyle } from './style'
 
 interface ButtonProviders {
-  name: string
+  pointerName: string
 }
 
-const Button = ({ name }: ButtonProviders) => {
-  const { setName } = NameEnablerInfo();
+const Button = ({ pointerName }: ButtonProviders) => {
+  const { setName, name } = NameEnablerInfo();
+  let target = false;
+  
+  if(pointerName === name){
+    target = true
+  }
+  
   return (
-    <ButtonStyle onClick={() => setName(name)}>
-      {name}
+    <ButtonStyle target={target} onClick={() => setName(pointerName)} >
+      {pointerName}
     </ButtonStyle>
   )
 }

@@ -7,10 +7,11 @@ export default function Header() {
     <HeaderStyle>
       <nav>
         <ul>
+          <li><Button pointerName={'Todos DEVs'}/></li>
           {enabler.listEnablers.map(x => 
-            <li><Button name={x}/></li>
+            <li><Button pointerName={x}/></li>
             )}
-          <li><Button name={'Facilitadores'}/></li>
+          <li><Button pointerName={'Facilitadores'}/></li>
         </ul>
       </nav>
     </HeaderStyle>
