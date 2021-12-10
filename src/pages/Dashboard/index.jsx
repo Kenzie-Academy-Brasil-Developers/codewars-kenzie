@@ -8,8 +8,9 @@ import { MainStyle } from "./style";
 const Dashboard = () => {
   const { name } = NameEnablerInfo();
   const [ devs, setDevs ] = useState([]);
+  const [ allRes ] = useState({});
 
-  const sortArray = (arr) => {
+  const sortArrayByHonor = (arr) => {
     const again = (newArr) => {
       let change = false;
       for(let i = 1; i < newArr.length; i++){
@@ -30,38 +31,41 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
-    let devsEnabler = [];
-    const arrayDevs = [];
-    let count = 0
+    let arrView = [];
+    const storagedView = [];
+    let count = 0;
 
     if (name === 'Facilitadores') {
       enabler.listEnablers.forEach(x => {
-        devsEnabler.push({
+        arrView.push({
           "name": x,
           "id_user": enabler[x].id_user
         })
       })
     } else {
-      devsEnabler = enabler[name].devs;
+      arrView = enabler[name].devs;
     }
-
-
-    devsEnabler.forEach(x => {
-      api.get(`/${x.id_user}`)
-        .then(res => {
-          res.data['realName'] = x.name
-          arrayDevs.push(res.data);
-          console.log(res.data)
-          count++;
-          if(count === devsEnabler.length){
-            const newArrayDevs = sortArray(arrayDevs);
-            setDevs(newArrayDevs);
-          }
-        })
-        .catch(err => console.log(err))
-    })
-
+  
+    if(allRes[name]){
+      setDevs(allRes[name])
+    } else {
+      arrView.forEach(x => {
+        api.get(`/${x.id_user}`)
+          .then(res => {
+            res.data['realName'] = x.name
+            storagedView.push(res.data);
+            count++;
+            if(count === arrView.length){
+              const newArrayDevs = sortArrayByHonor(storagedView);
+              setDevs(newArrayDevs);
+              allRes[name] = newArrayDevs;
+            }
+          })
+          .catch(err => console.log(err))
+      })
+    }
     
+
   }, [name]);
   return (
     <MainStyle>
