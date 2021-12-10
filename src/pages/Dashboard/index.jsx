@@ -10,6 +10,10 @@ const Dashboard = () => {
   const [ devs, setDevs ] = useState([]);
   const [ allRes ] = useState({});
 
+  const getHonorByEnabler = (arr) => {
+    return arr.reduce((acc, ele) => acc + ele.honor, 0)
+  }
+
   const sortArrayByHonor = (arr) => {
     const again = (newArr) => {
       let change = false;
@@ -51,7 +55,8 @@ const Dashboard = () => {
     } else {
       arrView.forEach(x => {
         api.get(`/${x.id_user}`)
-          .then(res => {
+          .then((res) => {
+            console.log('res.success')
             res.data['realName'] = x.name
             storagedView.push(res.data);
             count++;
@@ -63,14 +68,19 @@ const Dashboard = () => {
           })
           .catch(err => console.log(err))
       })
+      console.log('fsfsdfds')
     }
-    
+
+    console.log(devs)
 
   }, [name]);
+
+
   return (
     <MainStyle>
-      {devs.map((x, index) =>
-        <DevCard key={x.username} dev={x} position={index + 1}/>  
+      <h2>Total de honor por turma: {getHonorByEnabler(devs)}</h2>
+      {devs.map((x, index) => 
+        index < 10 && <DevCard key={x.username} dev={x} position={index + 1}/>  
       )}
     </MainStyle>
   )
