@@ -9,6 +9,7 @@ const Dashboard = () => {
   const { name } = NameEnablerInfo();
   const [ devs, setDevs ] = useState([]);
   const [ allRes ] = useState({});
+  const [ countUntil, setCountUntil ] = useState(10);
 
   const getHonorByEnabler = (arr) => arr.reduce((acc, ele) => acc + ele.honor, 0);
   
@@ -34,6 +35,7 @@ const Dashboard = () => {
   }
 
   useEffect(() => {
+    setCountUntil(10);
     let arrView = [];
     const storagedView = [];
     let count = 0;
@@ -46,6 +48,7 @@ const Dashboard = () => {
         })
       })
     } else if (name === 'Todos DEVs') {
+      setCountUntil(30)
       enabler.listEnablers.forEach(element => {
         arrView.push(...enabler[element].devs)
       })
@@ -82,8 +85,8 @@ const Dashboard = () => {
   return (
     <MainStyle>
       <h2>Total de honor {getHonorByEnabler(devs)}</h2>
-      {devs.map((currentDev, index) => 
-        index < 10 && <DevCard key={currentDev.username} dev={currentDev} position={index + 1}/>  
+      {devs.map((currentDev, index) =>
+        index < countUntil && <DevCard key={currentDev.username} dev={currentDev} position={index + 1}/>  
       )}
     </MainStyle>
   )
