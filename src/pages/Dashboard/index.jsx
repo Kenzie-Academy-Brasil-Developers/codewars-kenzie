@@ -56,7 +56,6 @@ const Dashboard = () => {
       arrView.forEach(x => {
         api.get(`/${x.id_user}`)
           .then((res) => {
-            console.log('res.success')
             res.data['realName'] = x.name
             storagedView.push(res.data);
             count++;
@@ -66,12 +65,14 @@ const Dashboard = () => {
               allRes[name] = newArrayDevs;
             }
           })
-          .catch(err => console.log(err))
+          .catch(function (error) {
+            count++;
+            if(error.response){
+              console.log('Error from url' + error.response.config.url)
+            }
+          });
       })
-      console.log('fsfsdfds')
     }
-
-    console.log(devs)
 
   }, [name]);
 
