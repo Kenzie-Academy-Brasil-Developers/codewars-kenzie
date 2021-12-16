@@ -54,7 +54,7 @@ const Dashboard = () => {
       })
     } else {
       arrView = enabler[name].devs;
-    }
+    } 
   
     if(allRes[name]){
       setDevs(allRes[name])
