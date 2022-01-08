@@ -9,7 +9,7 @@ const DevCard = ({dev, position}) => {
     <UlStyle color={color}>
       <li>{position}</li>
       <li>{dev.realName.length > 15
-      ? dev.realName.substring(0, 15) + '...'
+      ? dev.realName.substring(0, 13) + '...'
       : dev.realName
       }</li>
       <li>{dev.honor}</li>

@@ -1,5 +1,5 @@
 const enabler = {
-  listEnablers: ['Calebe', 'Beatriz', 'Luciano'],
+  listEnablers: ['Calebe', 'Beatriz', 'Luciano', 'Maykey'],
   Calebe: {
     id_user: "calebe-navarro",
     devs: [
@@ -185,6 +185,105 @@ const enabler = {
         "name": "Gabriel Benjamin",
         "id_user": "gbenjaminsc"
       },
+    ]
+  },
+  Maykey: {
+    id_user: "maykelnekel",
+    devs: [
+      {
+          "name": "Acauan Nascimento",
+          "id_user": "AcauanKZ"
+      },{
+          "name": "Amanda de Oliveira e Silva",
+          "id_user": "amandaolits"
+      },{
+          "name": "Andrea Melo",
+          "id_user": "DeaMelo"
+      },{
+          "name": "Carlos Rubi",
+          "id_user": "CarlosRubi"
+      },{
+          "name": "Cleyson Sales de Souza",
+          "id_user": "Cleyson%20Sales%20de%20Souza"
+      },{
+          "name": "Daniel Meneleu",
+          "id_user": "danielmeneleu"
+      },{
+          "name": "Dhulyanne Brito",
+          "id_user": "Dhulyanne"
+      },{
+          "name": "Diego Henrique",
+          "id_user": "Diego%20Henrique"
+      },{
+          "name": "Edson Gustavo Farias da Silva",
+          "id_user": "Gustavofsilva89"
+      },{
+          "name": "Elder de Oliveira Miranda",
+          "id_user": "elder.om"
+      },{
+          "name": "Emily Cristine Rodrigues Luiz",
+          "id_user": "emily1995"
+      },{
+          "name": "Enrico de Paula Pimentel",
+          "id_user": "enrico_pimentel"
+      },{
+          "name": "Enverton JOsé De Souza",
+          "id_user": "EvertonjoseKenzie"
+      },{
+          "name": "Fabio Ballerini Ribeiro dos Santos",
+          "id_user": "Fabio%20Ballerini"
+      },{
+          "name": "Francisco Jeihson Alves Bezerra",
+          "id_user": "franciscojeihson"
+      },{
+          "name": "Gustavo Goulart",
+          "id_user": "Gustavo%20Goulart"
+      },{
+          "name": "Jabes G Voltatoni",
+          "id_user": "Jabes%20G%20Voltatoni"
+      },{
+          "name": "Jaqueline Malinoski",
+          "id_user": "JaquelineMalinoski"
+      },{
+          "name": "João De Moura",
+          "id_user": "Jo%C3%A3o%20De%20Moura"
+      },{
+          "name": "Késia Amanda dos Santos",
+          "id_user": "KessyR"
+      },{
+          "name": "Luana Dal Pozzo",
+          "id_user": "Luana%20Dal%20Pozzo"
+      },{
+          "name": "Lucas Bacelar Nascimento",
+          "id_user": "Relashow"
+      },{
+          "name": "Myccael Rocha",
+          "id_user": "mycca93"
+      },{
+          "name": "Pablo Bitencourt",
+          "id_user": "Pablo%20Bitencourt"
+      },{
+          "name": "Pedro ",
+          "id_user": "pedroaos-dev"
+      },{
+          "name": "Pedro Henrique Alcântara",
+          "id_user": "pedrohar2021"
+      },{
+          "name": "Rebecca de Souza Pires Alves",
+          "id_user": "Rebecca%20Pires"
+      },{
+          "name": "Talitta Nunes Manoel",
+          "id_user": "talitta-nunes"
+      },{
+          "name": "Tarcisio Werner Paiva",
+          "id_user": "Tarcisio%20Werner"
+      },{
+          "name": "Tomas Avelino",
+          "id_user": "tomaspaulino"
+      },{
+          "name": "Veridiana Denigris",
+          "id_user": "veridenigris"
+      }
     ]
   }
 }
