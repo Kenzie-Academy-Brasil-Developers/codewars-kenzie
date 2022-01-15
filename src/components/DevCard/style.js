@@ -11,6 +11,7 @@ export const UlStyle = styled.ul`
   background: linear-gradient(to right, #f80759, ${props => props.color});
   opacity: 0.9;
 
+
   li{
     color: white;
     font-weight: 700;
@@ -26,6 +27,7 @@ export const UlStyle = styled.ul`
   :hover {
     transition: 0s;
     opacity: 1;
+    cursor:pointer;
   }
 
 `

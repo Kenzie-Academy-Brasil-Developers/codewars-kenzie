@@ -6,7 +6,7 @@ interface ButtonProviders {
 }
 
 const Button = ({ pointerName }: ButtonProviders) => {
-  const { setName, name } = NameEnablerInfo();
+  const { name, setCurrentName } = NameEnablerInfo();
   let target = false;
   
   if(pointerName === name){
@@ -14,7 +14,7 @@ const Button = ({ pointerName }: ButtonProviders) => {
   }
   
   return (
-    <ButtonStyle target={target} onClick={() => setName(pointerName)} >
+    <ButtonStyle target={target.toString()} onClick={() => setCurrentName(pointerName)} >
       {pointerName}
     </ButtonStyle>
   )

@@ -1,15 +1,17 @@
 import {HeaderStyle} from './style'
 import Button from './../Button'
-import enabler from '../../assets/enabler';
+import { NameEnablerInfo } from '../../providers/NameEnabler';
 
 export default function Header() {
+  const { name } = NameEnablerInfo();
+
   return (
     <HeaderStyle>
       <nav>
         <ul>
-          <li><Button pointerName={'Todos DEVs'}/></li>
-          {enabler.listEnablers.map(x => 
-            <li><Button pointerName={x}/></li>
+          <li><Button pointerName={'Todos DEVs'} /></li>
+            {name.map((x, index) => 
+              <li key={x} ><Button pointerName={x}/></li>
             )}
           <li><Button pointerName={'Facilitadores'}/></li>
         </ul>

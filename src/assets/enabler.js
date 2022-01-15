@@ -138,24 +138,96 @@ const enabler = {
     devs: [
       {
         "name": "Adriano Nóbrega",
-        "id_user": "adrianonobrega26"
-      },
-      {
-        "name": "Alex Silva",
-        "id_user": "MrRocha92"
+        "username": "adrianonobrega26"
       },
       {
         "name": "André Luís",
-        "id_user": "andre-abreu20"
+        "username": "andre-abreu20"
       },
       {
-        "name": "Beatriz",
-        "id_user": "beadebona"
+        "name": "Beatriz Debona",
+        "username": "beadebona"
       },
       {
-        "name": "Cati",
-        "id_user": "CatarinaVallim"
+        "name": "Cati Vallim",
+        "username": "CatarinaVallim"
       },
+      {
+        "name": "Douglas shclemper",
+        "username": "Schlemper"
+      },
+      {
+        "name": "Emanuel Arceneiro",
+        "username": "Emanuel%20GS"
+      },
+      {
+        "name": "Gabriel Coelho",
+        "username": "GabrielCoelho95"
+      },
+      {
+        "name": "Henrique Schardosim",
+        "username": "HiqueBarros"
+      },
+      {
+        "name": "Ivan Scaglioni",
+        "username": "iscaglioni"
+      },
+      {
+        "name": "Julia Coralaine",
+        "username": "Julia%20Fons"
+      },
+      {
+        "name": "Juliana Cristina",
+        "username": "jupliger"
+      },
+      {
+        "name": "Luiz Felipe",
+        "username": "luizfelipefaria"
+      },
+      {
+        "name": "Mario Andrade",
+        "username": "Mariofullcicle"
+      },
+      {
+        "name": "Matheus Chaves",
+        "username": "ditocujogy"
+      },
+      {
+        "name": "Patrick Vargas",
+        "username": "trickotar"
+      },
+      {
+        "name": "Pedro Yvo",
+        "username": "Pedrokaaa"
+      },
+      {
+        "name": "Raniery",
+        "username": "AlmeidaRaniery"
+      },
+      {
+        "name": "Thiago Nascimento",
+        "username": "tgnascimento"
+      },
+      {
+        "name": "Tiago Pesch",
+        "username": "tiagokp97"
+      },
+      {
+        "name": "Victor hugo",
+        "username": "Tooruh"
+      },
+      {
+        "name": "Vinicius Modena",
+        "username": "Vinicius%20Modena"
+      },
+      {
+        "name": "Wdson Danriei",
+        "username": "wdson91"
+      },
+      {
+        "name": "Ygor Maia",
+        "username": "ygormaia"
+      }
     ]
   },
   Beatriz: {
