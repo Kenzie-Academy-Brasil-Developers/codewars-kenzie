@@ -1,13 +1,11 @@
 import { HomeStyle, DivStyle } from './style'
 import { Link } from 'react-router-dom';
 import { NameEnablerInfo } from './../../providers/NameEnabler'
+import CircularStatic from './../../components/CircularProgress'
 
-import * as React from 'react';
-import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-import { red } from '@mui/material/colors';
 
 const Home = () => {
   const { isLoaded } = NameEnablerInfo();

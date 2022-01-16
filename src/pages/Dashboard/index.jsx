@@ -41,10 +41,7 @@ const Dashboard = () => {
       let currentDevs = sortArrayByHonor(resultRequestKenzie[currentName]["devs"])
       setDevs(currentDevs);
       setTotalHonor(getHonorByEnabler(resultRequestKenzie[currentName]["devs"]))
-    setCountUntil(10)
-      
-    } else {
-
+      setCountUntil(10)
     }
   }
 
@@ -77,20 +74,14 @@ const Dashboard = () => {
   }
 
   return (
-    !isLoaded 
-    ? <div>loading....</div> 
-    : (
     <MainStyle>
       <h2>Total de honor {totalHonor}</h2>
-      {/* <Profile /> */}
-
       {!!devs.length && devs.map((currentDev, index) =>
         index < countUntil && <DevCard key={currentDev.username} dev={currentDev} position={index + 1}/>  
         )}
       <div>
       </div>
     </MainStyle>
-    )
   )
 }
 
