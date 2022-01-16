@@ -2,16 +2,13 @@ import { useEffect, useState } from "react";
 import { NameEnablerInfo } from './../../providers/NameEnabler'
 import DevCard from './../../components/DevCard';
 import { MainStyle } from "./style";
-
-
-
+import { Navigate } from "react-router-dom";
 
 const Dashboard = () => {
-  const { resultRequestKenzie, currentName } = NameEnablerInfo();
+  const { resultRequestKenzie, currentName, isLoaded } = NameEnablerInfo();
   const [ devs, setDevs ] = useState([]);
   const [ countUntil, setCountUntil ] = useState(10);
   const [ totalHonor, setTotalHonor ] = useState(0);
-
 
   const getHonorByEnabler = (arr) => arr.reduce((acc, ele) => acc + ele.current_honor, 0);
   
@@ -57,7 +54,9 @@ const Dashboard = () => {
       let change = false;
 
       for(let i = 1; i < newArr.length; i++){
-        if(newArr[i]["current_honor"] > newArr[i-1]["current_honor"]){
+        if(newArr[i] === undefined){
+
+        } else if(newArr[i]["current_honor"] > newArr[i-1]["current_honor"]){
           change = true;
           const save = newArr[i-1];
           newArr[i-1] = newArr[i];
@@ -73,10 +72,14 @@ const Dashboard = () => {
     return newArry;
   }
 
+  if(!isLoaded){
+   return  <Navigate to="/" />
+  }
+
   return (
-    <>
-
-
+    !isLoaded 
+    ? <div>loading....</div> 
+    : (
     <MainStyle>
       <h2>Total de honor {totalHonor}</h2>
       {/* <Profile /> */}
@@ -87,7 +90,7 @@ const Dashboard = () => {
       <div>
       </div>
     </MainStyle>
-        </>
+    )
   )
 }
 
